@@ -25,8 +25,14 @@ namespace UIDemos.Controllers
 			var vm = new ContactViewModel();
             return View(vm);
         }
+		
+		public IActionResult SignUp()
+		{
+			var vm = new ContactViewModel();
+			return View(vm);
+		}
 
-        public IActionResult Error()
+		public IActionResult Error()
         {
             return View("~/Views/Shared/Error.cshtml");
         }

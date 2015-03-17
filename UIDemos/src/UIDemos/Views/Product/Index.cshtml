@@ -1,0 +1,12 @@
+﻿@using UIDemos.Models
+
+@model CatalogViewModel
+
+@{
+    ViewBag.Title = "Product Catalog";
+}
+<h1>@ViewBag.Title</h1>
+
+@using(Html.BeginForm()){
+	@Html.EditorFor(m=> m.SearchCriteria)
+}

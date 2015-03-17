@@ -3,6 +3,7 @@
 namespace UIDemos.Models
 {
 	public enum ProductType {
+		All,
 		Gear,
 		Food,
 		Beer

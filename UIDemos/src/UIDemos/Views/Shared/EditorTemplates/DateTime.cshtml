@@ -1,0 +1,8 @@
+﻿@model DateTime?
+
+@{
+	var name = ViewData.ModelMetadata.PropertyName;
+	var value = ViewData.Model.HasValue ? ViewData.Model.Value.ToString("d") : string.Empty;
+}
+
+<input id="@Html.Id(name)" name="@name" data-val-datepicker value="@value" class="form-control" />

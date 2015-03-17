@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Mvc.Rendering;
+using Microsoft.AspNet.Mvc.Rendering.Expressions;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -21,15 +22,16 @@ namespace UIDemos.Helpers
 										  Expression<System.Func<T, TValue>> prop,
 										  string containerClass)
 		{
+			var modelData = ExpressionMetadataProvider.FromLambdaExpression(prop, helper.ViewData, helper.MetadataProvider);
 			var writer = helper.ViewContext.Writer;
-
-
+			
 			var container = new TagBuilder("div");
 			container.AddCssClass("form-group");
 			container.AddCssClass(containerClass);
 
 			var label = helper.LabelFor(prop);
-			var text = helper.TextBoxFor(prop, new { @class="form-control"});
+			
+			var text =  (modelData.ModelType.Equals(typeof(DateTime)) || modelData.ModelType.Equals(typeof(DateTime?))) ? helper.EditorFor(prop) :  helper.TextBoxFor(prop, new { @class="form-control"});
 			var validation = helper.ValidationMessageFor(prop);
 
 			container.InnerHtml = string.Format("{0} {1} {2}", label.ToString(), text.ToString(), validation.ToString());
