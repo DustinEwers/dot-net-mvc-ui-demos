@@ -7,9 +7,25 @@ using UIDemos.Models;
 namespace UIDemos.Migrations
 {
     [ContextType(typeof(UIDemos.Models.ApplicationDbContext))]
-    public class ApplicationDbContextModelSnapshot : ModelSnapshot
+    public partial class initial : IMigrationMetadata
     {
-        public override IModel Model
+        string IMigrationMetadata.MigrationId
+        {
+            get
+            {
+                return "201503210230340_initial";
+            }
+        }
+        
+        string IMigrationMetadata.ProductVersion
+        {
+            get
+            {
+                return "7.0.0-beta3-12166";
+            }
+        }
+        
+        IModel IMigrationMetadata.TargetModel
         {
             get
             {

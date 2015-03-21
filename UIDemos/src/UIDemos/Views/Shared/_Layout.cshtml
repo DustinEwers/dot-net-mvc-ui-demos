@@ -27,12 +27,15 @@
                     <li>@Html.ActionLink("Catalog", "Index", "Product")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
+				
 				@await Html.PartialAsync("_LoginPartial")
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="@Url.Action("SignUp", "Home")">
+					<li>
+						<a href="@Url.Action("SignUp", "Home")">
 							<span class="glyphicon glyphicon-envelope"> </span>
 						</a>
 					</li>
+					<li>@Component.Invoke("ShoppingCart")</li>
 				</ul>                
             </div>
         </div>

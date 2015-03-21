@@ -45,3 +45,8 @@ textarea {
         z-index: 10 !important;
     }
 }
+
+.shopping-cart {
+	width:500px;
+	padding:10px;
+}
