@@ -3,11 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using UIDemos.Attributes;
 
 namespace UIDemos.Models
 {
-    public class ContactViewModel
-    {
+	public class ContactViewModel
+	{
 		public IEnumerable<SelectListItem> States {
 			get {
 				var _states = new List<string> {
@@ -26,10 +27,12 @@ namespace UIDemos.Models
 				return _states.Select(st => new SelectListItem { Text = st, Value = st });
 			}
 		}
-		
+
+		[Required]
 		[Display(Name = "First Name")]
 		public string FirstName { get; set; }
 
+		[Required]
 		[Display(Name = "Last Name")]
 		public string LastName { get; set; }
 
@@ -48,7 +51,9 @@ namespace UIDemos.Models
 		[Display(Name = "Email Address")]
 		public string Email { get; set; }
 
-		[Display(Name = "Birthday")]
+		[PastDateOnly]
+		[Required]
+        [Display(Name = "Birthday")]
 		public DateTime? Birthday { get; set; }
 	}
 }

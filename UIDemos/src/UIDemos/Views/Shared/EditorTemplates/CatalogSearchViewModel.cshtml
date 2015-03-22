@@ -1,21 +1,25 @@
 ﻿@using UIDemos.Models
+@using UIDemos.Helpers
 
 @model CatalogSearchViewModel
 
 <div class="row">
 	<div class="col-md-4 form-group">
-		<label for="@Html.IdFor(m=>m.Name)">Product Name</label>
-		<input type="text" id="@Html.IdFor(m=>m.Name)" name="@Html.NameFor(m=>m.Name)" class="form-control" />
+		@Html.LabelFor(m => m.Name)
+		@Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+		@Html.ValidationMessageFor(m => m.Name)
 	</div>
 	<div class="col-md-4">
 		<label for="@Html.IdFor(m=>m.Name)">Price</label>
 		<div class="row">
 			<div class="col-md-5">
-				<input type="number" id="@Html.IdFor(m=>m.StartPrice)" name="@Html.NameFor(m=>m.StartPrice)" class="form-control" />
+				@Html.TextBoxFor(m => m.StartPrice, new { @class = "form-control" })
+				@Html.ValidationMessageFor(m => m.StartPrice)
 			</div>
 			<div class="col-md-1">-</div>
 			<div class="col-md-5">
-				<input type="number" id="@Html.IdFor(m=>m.EndPrice)" name="@Html.NameFor(m=>m.EndPrice)" class="form-control" />
+				@Html.TextBoxFor(m => m.EndPrice, new { @class="form-control"})
+				@Html.ValidationMessageFor(m => m.EndPrice)
 			</div>
 		</div>
 	</div>

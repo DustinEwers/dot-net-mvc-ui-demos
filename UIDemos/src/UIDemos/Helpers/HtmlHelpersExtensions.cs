@@ -25,10 +25,10 @@ namespace UIDemos.Helpers
 			var modelData = ExpressionMetadataProvider.FromLambdaExpression(prop, helper.ViewData, helper.MetadataProvider);
 			var writer = helper.ViewContext.Writer;
 			
-			var container = new TagBuilder("div");
+            var container = new TagBuilder("div");
 			container.AddCssClass("form-group");
 			container.AddCssClass(containerClass);
-
+			
 			var label = helper.LabelFor(prop);
 			
 			var text =  (modelData.ModelType.Equals(typeof(DateTime)) || modelData.ModelType.Equals(typeof(DateTime?))) ? helper.EditorFor(prop) :  helper.TextBoxFor(prop, new { @class="form-control"});

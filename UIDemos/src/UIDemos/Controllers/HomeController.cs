@@ -32,6 +32,13 @@ namespace UIDemos.Controllers
 			return View(vm);
 		}
 
+		[HttpPost]
+		public IActionResult SignUp(ContactViewModel rvm)
+		{
+			
+			return View(rvm);
+		}
+
 		public IActionResult Error()
         {
             return View("~/Views/Shared/Error.cshtml");

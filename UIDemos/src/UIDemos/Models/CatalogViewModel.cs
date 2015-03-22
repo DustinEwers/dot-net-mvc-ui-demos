@@ -7,6 +7,5 @@ namespace UIDemos.Models
 		public CatalogSearchViewModel SearchCriteria { get; set; }
 
 		public List<Product> Products { get; set; }
-
     }
 }
