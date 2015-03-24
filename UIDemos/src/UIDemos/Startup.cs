@@ -3,20 +3,17 @@ using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Diagnostics;
 using Microsoft.AspNet.Diagnostics.Entity;
 using Microsoft.AspNet.Hosting;
-using Microsoft.AspNet.Http;
 using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Routing;
-using Microsoft.AspNet.Security.Cookies;
-using Microsoft.Data.Entity;
 using Microsoft.Framework.ConfigurationModel;
 using Microsoft.Framework.DependencyInjection;
 using Microsoft.Framework.Logging;
 using Microsoft.Framework.Logging.Console;
 using UIDemos.Models;
+using Microsoft.AspNet.Mvc;
 
 namespace UIDemos
 {
-    public class Startup
+	public class Startup
     {
         public Startup(IHostingEnvironment env)
         {
@@ -41,12 +38,13 @@ namespace UIDemos
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             // Add MVC services to the services container.
-            services.AddMvc();
+            services.AddMvc().Configure<MvcOptions>(options => {
+				// Additional Config goes here.
+			});
 
 			// Uncomment the following line to add Web API servcies which makes it easier to port Web API 2 controllers.
 			// You need to add Microsoft.AspNet.Mvc.WebApiCompatShim package to project.json
-			// services.AddWebApiConventions();
-			
+			// services.AddWebApiConventions();	
         }
 
         // Configure is called after ConfigureServices is called.

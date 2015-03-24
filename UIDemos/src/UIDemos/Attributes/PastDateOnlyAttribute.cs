@@ -62,7 +62,7 @@ namespace UIDemos.Attributes
 			ClientModelValidationContext context)
 		{
 			var errorMessage = GetErrorMessage(context.ModelMetadata);
-			return new[] { new ModelClientValidationPastDateOnlyRule(errorMessage) };
+			yield return new ModelClientValidationPastDateOnlyRule(errorMessage);
 		}
 	}
 }
