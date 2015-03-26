@@ -1,0 +1,26 @@
+﻿@using UIDemos.Helpers
+@model UIDemos.Models.Contact
+
+@using (Html.BeginRow()) {
+	Html.TextEditBlockFor(m => m.FirstName, "col-md-2")
+		.TextEditBlockFor(m => m.LastName, "col-md-2")
+		.TextEditBlockFor(m => m.Birthday, "col-md-2");
+}
+
+@using (Html.BeginRow())
+{
+	Html.TextEditBlockFor(m => m.Address1, "col-md-4");
+}
+
+@using (Html.BeginRow())
+{
+	Html.TextEditBlockFor(m => m.City, "col-md-2")
+		.DropDownBlockFor(m => m.State, Model.States, "col-md-2")
+		.TextEditBlockFor(m => m.ZipCode, "col-md-2");
+}
+
+@using (Html.BeginRow())
+{
+	Html.TextEditBlockFor(m => m.Email, "col-md-4");
+}
+

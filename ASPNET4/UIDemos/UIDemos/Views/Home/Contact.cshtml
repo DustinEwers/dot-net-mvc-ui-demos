@@ -1,0 +1,18 @@
+﻿@using UIDemos.Helpers
+@model UIDemos.Models.Contact
+@{
+	ViewBag.Title = "Contact";
+}
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm())
+{
+	@Html.EditorFor(m=> m)
+
+	using (Html.BeginRow())
+	{
+		<div class="col-md-12">
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</div>
+	}
+}

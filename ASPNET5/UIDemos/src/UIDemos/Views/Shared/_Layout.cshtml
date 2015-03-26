@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap-touch-carousel/css/bootstrap-touch-carousel.css" />
+	<link rel="stylesheet" href="~/lib/eonasdan-bootstrap-datetimepicker/bootstrap-datetimepicker.min.css" />
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Wisconsin Store", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Catalog", "Index", "Product")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+				
+				@await Html.PartialAsync("_LoginPartial")
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href="@Url.Action("SignUp", "Home")">
+							<span class="glyphicon glyphicon-envelope"> </span>
+						</a>
+					</li>
+					<li>@Component.Invoke("ShoppingCart")</li>
+				</ul>                
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year</p>
+        </footer>
+    </div>
+    <script src="~/lib/jquery/jquery.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.js"></script>
+    <script src="~/lib/hammer.js/hammer.js"></script>
+    <script src="~/lib/bootstrap-touch-carousel/js/bootstrap-touch-carousel.js"></script>
+	<script src="~/lib/moment/moment.js"></script>
+	<script src="~/lib/eonasdan-bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script>
+	<script src="~/lib/site.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

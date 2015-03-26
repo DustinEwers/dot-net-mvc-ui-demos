@@ -1,0 +1,25 @@
+﻿@model DateTime?
+
+@{
+	var name = ViewData.ModelMetadata.PropertyName;
+	var value = ViewData.Model.HasValue ? ViewData.Model.Value.ToString("d") : string.Empty;
+
+	var rules = Html.GetUnobtrusiveValidationAttributes(name, ViewData.ModelMetadata);
+
+	var txtBox = new TagBuilder("input");
+	txtBox.Attributes.Add("name", name);
+	txtBox.Attributes.Add("data-val-datepicker","");
+	txtBox.AddCssClass("form-control");
+	txtBox.Attributes.Add("id", TagBuilder.CreateSanitizedId(name));
+	txtBox.MergeAttributes(rules);
+
+	if (Model.HasValue)
+	{
+		txtBox.Attributes.Add("value", value);
+	}
+}
+
+@Html.Raw(txtBox.ToString(TagRenderMode.SelfClosing))
+
+
+

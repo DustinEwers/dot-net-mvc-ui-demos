@@ -1,0 +1,46 @@
+﻿@using UIDemos.Models
+@using UIDemos.Helpers
+
+@model CatalogSearchViewModel
+
+<div class="row">
+	<div class="col-md-4 form-group">
+		@Html.LabelFor(m => m.Name)
+		@Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+		@Html.ValidationMessageFor(m => m.Name)
+	</div>
+	<div class="col-md-4">
+		<label for="@Html.IdFor(m=>m.Name)">Price</label>
+		<div class="row">
+			<div class="col-md-5">
+				@Html.TextBoxFor(m => m.StartPrice, new { @class = "form-control" })
+				@Html.ValidationMessageFor(m => m.StartPrice)
+			</div>
+			<div class="col-md-1">-</div>
+			<div class="col-md-5">
+				@Html.TextBoxFor(m => m.EndPrice, new { @class="form-control"})
+				@Html.ValidationMessageFor(m => m.EndPrice)
+			</div>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="btn-group" data-toggle="buttons">
+			@CreateRadio(ProductType.All)
+			@CreateRadio(ProductType.Beer)
+			@CreateRadio(ProductType.Food)
+			@CreateRadio(ProductType.Gear)
+		</div>
+	</div>
+</div>
+
+@helper CreateRadio(ProductType type)
+{
+		var value = type.ToString("D");
+		var label = type.ToString("G");
+		var id = string.Format("{0}_{1}", Html.IdFor(m => m.Type), value);
+
+			<label class="btn btn-primary">
+				<input type="radio" name="@Html.NameFor(m=>m.Type)" id="@id" value="@value" autocomplete="off">
+				@label
+			</label>
+}
