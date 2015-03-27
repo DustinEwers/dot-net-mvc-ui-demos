@@ -5,9 +5,9 @@
 		});
 	});
 
-	jQuery.validator.addMethod("pastdateonly", function (value, element, params) {
+	jQuery.validator.addMethod("pastdateonly", function (val, element, params) {
 		var value = $.trim($(element).val());
-		if (value === '') return true
+		if (value === '') return true;
 
 		var maxDate = params.maxdate;
 
@@ -16,10 +16,10 @@
 
 	jQuery.validator.unobtrusive.adapters.add("pastdateonly", ["maxdate"],
 	  function (options) {
-	  	options.rules['pastdateonly'] = {
+	  	options.rules["pastdateonly"] = {
 	  		maxdate: options.params.maxdate
 	  	};
-	  	options.messages['pastdateonly'] = options.message;
+	  	options.messages["pastdateonly"] = options.message;
 	  }
 	);
 });
