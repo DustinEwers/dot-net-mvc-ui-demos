@@ -1,16 +1,16 @@
-﻿using Microsoft.AspNet.Mvc;
-using UIDemos.Models;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNet.Mvc;
+using UIDemos.Models;
 
-namespace UIDemos.Views.Shared.Components
+namespace UIDemos.ViewComponents
 {
     public class ShoppingCartViewComponent : ViewComponent
     {
-		private readonly ApplicationDbContext db;
+		private readonly ApplicationDbContext _db;
 
 		public ShoppingCartViewComponent(ApplicationDbContext context) {
-			db = context;
+			_db = context;
 		}
 
 		public IViewComponentResult Invoke() {
@@ -21,12 +21,13 @@ namespace UIDemos.Views.Shared.Components
 
 			AddProducts(cart);
 
+			// ReSharper disable once Mvc.ViewNotResolved
 			return View(cart);
 		}
 		
 		// TODO - Actually hook up the shopping cart with real product adds. 
 		private void AddProducts(ShoppingCart cart) {
-			var products = db.Products.Where(x => x.Type != ProductType.Beer);
+			var products = _db.Products.Where(x => x.Type != ProductType.Beer);
 			foreach (var product in products)
 			{
 				cart.Items.Add(new ShoppingCartItem { Product = product, Quantity = 2 });

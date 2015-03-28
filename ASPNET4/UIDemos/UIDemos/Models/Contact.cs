@@ -13,7 +13,7 @@ namespace UIDemos.Models
 		{
 			get
 			{
-				var _states = new List<string> {
+				var states = new List<string> {
 					"Alabama", "Alaska","Arizona","Arkansas","California",
 					"Colorado","Connecticut","Delaware","Florida","Georgia",
 					"Hawaii","Idaho","Illinois","Indiana","Iowa",
@@ -26,7 +26,7 @@ namespace UIDemos.Models
 					"Virginia","Washington","West Virginia","Wisconsin","Wyoming"
 				};
 
-				return _states.Select(st => new SelectListItem { Text = st, Value = st });
+				return states.Select(st => new SelectListItem { Text = st, Value = st });
 			}
 		}
 
