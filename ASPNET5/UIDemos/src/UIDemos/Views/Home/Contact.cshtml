@@ -8,48 +8,51 @@
 }
 <h2>@ViewBag.Title</h2>
 
-
-@using (Html.BeginForm()) {
-	using (Html.BeginRow()) {
-		Html.TextEditBlockFor(m => m.FirstName, "col-md-2")
-			.TextEditBlockFor(m => m.LastName, "col-md-2");
-	}
-
-	using (Html.BeginRow())
-	{
-		Html.TextEditBlockFor(m => m.Address1, "col-md-4");
-	}
-
-	using (Html.BeginRow())
-	{
-		Html.TextEditBlockFor(m => m.City, "col-md-2")
-			.DropDownBlockFor(m => m.State, Model.States, "col-md-2")
-			.TextEditBlockFor(m => m.ZipCode, "col-md-2");
-	}
-
-	using (Html.BeginRow())
-	{
+<form asp-controller="Home" asp-action="Contacts" method="post" asp-anti-forgery="true">
+	<div class="row">
+		<div class="col-md-2 form-group">
+			<label asp-for="FirstName"></label>
+			<input asp-for="FirstName" class="form-control" />
+			<span asp-validation-for="FirstName"></span>
+		</div>
+		<div class="col-md-2 form-group">
+			<label asp-for="LastName"></label>
+			<input asp-for="LastName" class="form-control" />
+			<span asp-validation-for="LastName"></span>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4 form-group">
+			<label asp-for="Address1"></label>
+			<input asp-for="Address1" class="form-control"/>
+			<span asp-validation-for="Address1"></span>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-2 form-group">
+			<label asp-for="City"></label>
+			<input asp-for="City" class="form-control"/>
+			<span asp-validation-for="City"></span>
+		</div>
+		<div class="col-md-2 form-group">
+			<label asp-for="State"></label>
+			<select asp-for="State" asp-items="Model.States" class="form-control"></select>
+			<span asp-validation-for="State"></span>
+		</div>
+		<div class="col-md-2 form-group">
+			<label asp-for="ZipCode"></label>
+			<input asp-for="ZipCode" class="form-control"/>
+			<span asp-validation-for="ZipCode"></span>
+		</div>
+	</div>
+	<div class="row">
 		<div class="col-md-12">
 			<button type="submit" class="btn btn-primary">Submit</button>
 		</div>
-	}
-}
-
-
-@using (Html.BeginRow("row-top-spacer"))
-{
-	<div class="col-md-12">
-		<address>
-			123 Wisconsin Way<br />
-			Madison, WI 53704<br />
-			<abbr title="Phone">P:</abbr>
-			608-123-1111
-		</address>
-		<address>
-			<strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-			<strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-		</address>
 	</div>
+</form>
+
+@section Scripts {
+	<script src="@Url.Content("~/lib/jquery-validation/jquery.validate.js")"></script>
+	<script src="@Url.Content("~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js")"></script>
 }
-
-

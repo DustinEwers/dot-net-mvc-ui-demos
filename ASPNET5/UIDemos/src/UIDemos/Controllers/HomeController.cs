@@ -25,7 +25,14 @@ namespace UIDemos.Controllers
 			var vm = new ContactViewModel();
             return View(vm);
         }
-		
+
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public IActionResult Contact(ContactViewModel vm)
+		{
+			return View(vm);
+		}
+
 		public IActionResult SignUp()
 		{
 			var vm = new ContactViewModel();

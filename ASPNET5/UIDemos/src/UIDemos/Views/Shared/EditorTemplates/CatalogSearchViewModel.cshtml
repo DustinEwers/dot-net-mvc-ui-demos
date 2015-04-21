@@ -1,5 +1,4 @@
 ﻿@using UIDemos.Models
-@using UIDemos.Helpers
 
 @model CatalogSearchViewModel
 
@@ -40,7 +39,7 @@
 		var id = string.Format("{0}_{1}", Html.IdFor(m => m.Type), value);
 
 			<label class="btn btn-primary">
-				<input type="radio" name="@Html.NameFor(m=>m.Type)" id="@id" value="@value" autocomplete="off">
+				<input type="radio" name="@Html.NameFor(m => m.Type)" id="@id" value="@value" autocomplete="off"/>
 				@label
 			</label>
 }
