@@ -1,5 +1,4 @@
 ﻿@using UIDemos.Models;
-@using UIDemos.Helpers;
 
 @model ContactViewModel
 
@@ -10,16 +9,16 @@
 
 <form asp-controller="Home" asp-action="Contacts" method="post" asp-anti-forgery="true">
 	<div class="row">
-		<div class="col-md-2 form-group">
+		<formgroup size="2">
 			<label asp-for="FirstName"></label>
 			<input asp-for="FirstName" class="form-control" />
 			<span asp-validation-for="FirstName"></span>
-		</div>
-		<div class="col-md-2 form-group">
+		</formgroup>
+		<formgroup size="2">
 			<label asp-for="LastName"></label>
-			<input asp-for="LastName" class="form-control" />
+			<input asp-for="LastName" class="form-control"/>
 			<span asp-validation-for="LastName"></span>
-		</div>
+		</formgroup>
 	</div>
 	<div class="row">
 		<div class="col-md-4 form-group">
