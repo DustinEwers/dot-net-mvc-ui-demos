@@ -1,0 +1,10 @@
+{
+  "AppSettings": {
+    "SiteTitle": "vNextUIDemos"
+  },
+  "Data": {
+    "DefaultConnection": {
+      "ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=aspnet5-vNextUIDemos-59aad970-4dbd-4119-a128-52d06c776387;Trusted_Connection=True;MultipleActiveResultSets=true"
+    }
+  }
+}

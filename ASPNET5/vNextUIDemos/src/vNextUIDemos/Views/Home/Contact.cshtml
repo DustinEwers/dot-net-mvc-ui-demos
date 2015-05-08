@@ -1,0 +1,52 @@
+﻿@using System.Threading.Tasks
+@using vNextUIDemos.Models
+@model ContactViewModel
+
+@{
+    ViewBag.Title = "Contact";
+}
+<h2>@ViewBag.Title</h2>
+
+<form asp-controller="Home" asp-action="Contacts" method="post" asp-anti-forgery="true">
+    <row>
+        <formgroup size="2">
+            <label asp-for="FirstName"></label>
+            <input asp-for="FirstName" class="form-control" />
+            <span asp-validation-for="FirstName"></span>
+        </formgroup>
+        <formgroup size="2">
+            <label asp-for="LastName"></label>
+            <input asp-for="LastName" class="form-control" />
+            <span asp-validation-for="LastName"></span>
+        </formgroup>
+    </row>
+    <div class="row">
+        <formgroup size="4">
+            <label asp-for="Address1"></label>
+            <input asp-for="Address1" class="form-control" />
+            <span asp-validation-for="Address1"></span>
+        </formgroup>
+    </div>
+    <div class="row">
+        <div class="col-md-2 form-group">
+            <label asp-for="City"></label>
+            <input asp-for="City" class="form-control" />
+            <span asp-validation-for="City"></span>
+        </div>
+        <div class="col-md-2 form-group">
+            <label asp-for="State"></label>
+            <select asp-for="State" asp-items="Model.States" class="form-control"></select>
+            <span asp-validation-for="State"></span>
+        </div>
+        <div class="col-md-2 form-group">
+            <label asp-for="ZipCode"></label>
+            <input asp-for="ZipCode" class="form-control" />
+            <span asp-validation-for="ZipCode"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</form>
