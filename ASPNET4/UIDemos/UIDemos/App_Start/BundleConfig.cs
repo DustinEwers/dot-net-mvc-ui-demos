@@ -8,7 +8,11 @@ namespace UIDemos
 		// For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
 		public static void RegisterBundles(BundleCollection bundles)
 		{
-			bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
+            bundles.Add(new ScriptBundle("~/bundles/impress").Include(
+            "~/Scripts/impress.js"));
+
+
+            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
 						"~/Scripts/jquery-{version}.js"));
 
 			bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
@@ -30,6 +34,9 @@ namespace UIDemos
 					  "~/Content/bootstrap.css",
 					  "~/Content/bootstrap-datetimepicker.css",
                       "~/Content/site.css"));
-		}
+            
+            bundles.Add(new ScriptBundle("~/Content/slides").Include(
+            "~/Content/slides.css"));
+        }
 	}
 }

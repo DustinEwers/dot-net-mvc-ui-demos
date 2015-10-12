@@ -178,6 +178,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\SlidesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -197,6 +198,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\less\slides.less" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -290,6 +292,7 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\impress.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -346,6 +349,7 @@
     <Content Include="Views\Shared\EditorTemplates\Contact.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\DateTime.cshtml" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
+    <Content Include="Views\Slides\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
