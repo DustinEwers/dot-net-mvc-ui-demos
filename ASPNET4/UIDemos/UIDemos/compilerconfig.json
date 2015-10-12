@@ -1,6 +1,6 @@
 ﻿[
   {
-    "outputFile": "Content/less/slides.css",
-    "inputFile": "Content/less/slides.less"
+    "outputFile": "Content/slides.css",
+    "inputFile": "Content/slides.less"
   }
 ]

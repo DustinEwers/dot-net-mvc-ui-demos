@@ -10,89 +10,100 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/slides")
 </head>
-    <body>
-        <!--
+<body>
+    <!--
 
-        So to summarize of all the possible attributes used to position presentation steps, we have:
+    So to summarize of all the possible attributes used to position presentation steps, we have:
 
-        * `data-x`, `data-y`, `data-z` - they define the position of **the center** of step element on
-            the canvas in pixels; their default value is 0;
-        * `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, `data-rotate` - they define the rotation of
-            the element around given axis in degrees; their default value is 0; `data-rotate` and `data-rotate-z`
-            are exactly the same;
-        * `data-scale` - defines the scale of step element; default value is 1
+    * `data-x`, `data-y`, `data-z` - they define the position of **the center** of step element on
+        the canvas in pixels; their default value is 0;
+    * `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, `data-rotate` - they define the rotation of
+        the element around given axis in degrees; their default value is 0; `data-rotate` and `data-rotate-z`
+        are exactly the same;
+    * `data-scale` - defines the scale of step element; default value is 1
 
-        These values are used by impress.js in CSS transformation functions, so for more information consult
-        CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
-        -->
+    These values are used by impress.js in CSS transformation functions, so for more information consult
+    CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
+    -->
 
 
 
-        <div id="impress" >
-            <div id="intro" class="step slide">
-                <h2>MVC UI - </h2>
-                <p>Dustin Ewers</p>
-                <p>Contact Info</p>
-            </div>
-            <div id="what-makes-a-good-form" class="step slide" data-x="1000">
-                <h2>What makes a good form?</h2>
-                <form>
-                    <input type="text" placeholder="????" />
-                    <input type="text" placeholder="????" />
-                    <input type="text" placeholder="????" />
-                </form>
-            </div>
-            <div  class="step slide" data-x="1000" data-y="1000">
-                <p>Useability</p>
-            </div>
-            <div class="step slide" data-x="0" data-y="1000">
-                <p>Security</p>
-            </div>
-            <div class="step slide" data-x="0" data-y="2000">
-                <p>Artistic / Visual Design</p>
-            </div>
-            <div class="step slide" data-x="0" data-y="2000">
-                <p>Accessability</p>
-            </div>
-            <div class="step slide" data-x="0" data-y="2000" data-scale="2">
-                <p>CheckList</p>
-                <form>
-                    <label><input type="checkbox" />????</label>
-                    <label><input type="checkbox" />????</label>
-                    <label><input type="checkbox" />????</label>
-                    <label><input type="checkbox" />????</label>
-                    <label><input type="checkbox" />????</label>
-                    <label><input type="checkbox" />????</label>
-                    <label><input type="checkbox" />????</label>
-                    <label><input type="checkbox" />????</label>
-                </form>
-            </div>
-            <div class="step slide" data-x="0" data-y="2000">
-                <h2>So how do we handle all of this?</h2>
-            </div>
-            <div class="step slide" data-x="0" data-y="2000">
-                <h2>Bake it in the architecture!</h2>
-                <p>Automate your UI Standards</p>
-            </div>
-            <div class="step slide" data-x="0" data-y="2000">
-                <h2>Todays Goal</h2>
-                <p>Use MVC Components to automate coding standards</p>
-            </div>
-            <div class="step slide" data-x="0" data-y="2000">
-                <h2>Roadmap</h2>
-                <p>Automate your UI Standards</p>
-            </div>
+    <div id="impress">
+        <div id="intro" class="step slide">
+            <h2>
+                ASP.NET MVC UI Recipes <br />
+                <small>Build Better Interfaces With Less Code</small>
+            </h2>
+            <p>Dustin Ewers</p>
+            <p>
+                Twitter: DustinJEwers <br/>
+                Website: www.dustinewers.com <br />
+                LinkedIn: www.linkedin.com/in/dustinewers
+            </p>
+            <p>
+                Demo Code:
+                github.com/DustinEwers/dot-net-mvc-ui-demos
+            </p>
         </div>
-        
+        <div id="what-makes-a-good-form" class="step slide" data-x="0" data-y="1000">
+            <h2>What makes a good form?</h2>
+            <form>
+                <input type="text" placeholder="????" />
+                <input type="text" placeholder="????" />
+                <input type="text" placeholder="????" />
+            </form>
+        </div>
+        <div class="step slide" data-x="1000" data-y="1000">
+            <p>Useability</p>
+        </div>
+        <div class="step slide" data-x="2000" data-y="1000">
+            <p>Security</p>
+        </div>
+        <div class="step slide" data-x="3000" data-y="1000">
+            <p>Artistic / Visual Design</p>
+        </div>
+        <div class="step slide" data-x="4000" data-y="1000">
+            <p>Accessability</p>
+        </div>
+        <div class="step slide" data-x="2000" data-y="2000" data-scale="1.5">
+            <p>CheckList</p>
+            <form>
+                <label><input type="checkbox" />????</label>
+                <label><input type="checkbox" />????</label>
+                <label><input type="checkbox" />????</label>
+                <label><input type="checkbox" />????</label>
+                <label><input type="checkbox" />????</label>
+                <label><input type="checkbox" />????</label>
+                <label><input type="checkbox" />????</label>
+                <label><input type="checkbox" />????</label>
+            </form>
+        </div>
+        <div class="step slide" data-x="0" data-y="3000">
+            <h2>So how do we handle all of this?</h2>
+        </div>
+        <div class="step slide" data-x="1000" data-y="3000">
+            <h2>Bake it in the architecture!</h2>
+            <p>Automate your UI Standards</p>
+        </div>
+        <div class="step slide" data-x="0" data-y="4000">
+            <h2>Todays Goal</h2>
+            <p>Use MVC Components to automate coding standards</p>
+        </div>
+        <div class="step slide" data-x="0" data-y="5000">
+            <h2>Roadmap</h2>
+            <p>Automate your UI Standards</p>
+        </div>
+    </div>
 
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-        @Scripts.Render("~/bundles/impress")
 
-        <script type="text/javascript">
-            impress().init();
-        
-        </script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/impress")
 
-    </body>
+    <script type="text/javascript">
+        impress().init();
+
+    </script>
+
+</body>
 </html>
