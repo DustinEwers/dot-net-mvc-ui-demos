@@ -34,67 +34,126 @@
                 ASP.NET MVC UI Recipes <br />
                 <small>Build Better Interfaces With Less Code</small>
             </h2>
-            <p>Dustin Ewers</p>
+            <br/>
+            <br/>
+            <br />
+            <br />
+            <br />
+            <br />
+            <p><strong>Dustin Ewers</strong></p>
             <p>
-                Twitter: DustinJEwers <br/>
-                Website: www.dustinewers.com <br />
-                LinkedIn: www.linkedin.com/in/dustinewers
+                Twitter: <strong>DustinJEwers</strong> <br/>
+                Website: <strong>www.dustinewers.com</strong> <br />
+                LinkedIn: <strong>www.linkedin.com/in/dustinewers</strong>
             </p>
             <p>
                 Demo Code:
-                github.com/DustinEwers/dot-net-mvc-ui-demos
+                <strong>github.com/DustinEwers/dot-net-mvc-ui-demos</strong>
             </p>
         </div>
         <div id="what-makes-a-good-form" class="step slide" data-x="0" data-y="1000">
             <h2>What makes a good form?</h2>
-            <form>
-                <input type="text" placeholder="????" />
-                <input type="text" placeholder="????" />
-                <input type="text" placeholder="????" />
-            </form>
+            <img src="~/Content/images/basicform.png" />
         </div>
         <div class="step slide" data-x="1000" data-y="1000">
             <h2>Useability</h2>
+            <br /><br />
+            <ul>
+                <li>Affordances</li>
+                <li>Useful Messaging</li>
+                <li>Labels and their placement</li>
+                <li>Required field indication</li>
+                <li>Input Control Choice (Radio, Checkbox, Text, Select, etc...)</li>
+                <li>Feedback</li>
+            </ul>
         </div>
         <div class="step slide" data-x="2000" data-y="1000">
             <h2>Security</h2>
+            <br /><br />
+            <ul>
+                <li>Input Validation</li>
+                <li>XSS Prevention</li>
+                <li>HTML Encoding</li>
+            </ul>
         </div>
         <div class="step slide" data-x="3000" data-y="1000">
             <h2>Artistic / Visual Design</h2>
+            <br /><br />
+            <ul>
+                <li>Color Choice</li>
+                <li>Spacing and Padding</li>
+                <li>Layout</li>
+            </ul>
         </div>
         <div class="step slide" data-x="4000" data-y="1000">
             <h2>Accessability</h2>
+            <br /><br />
+            <ul>
+                <li>Contrast levels</li>
+                <li>Alt Tags</li>
+                <li>Aria / Screen Readers</li>
+                <li>Label matching</li>
+            </ul>
         </div>
         <div class="step slide" data-x="2000" data-y="2000" data-scale="1.5">
-            <h2>CheckList</h2>
-            <form>
-                <label><input type="checkbox" />????</label>
-                <label><input type="checkbox" />????</label>
-                <label><input type="checkbox" />????</label>
-                <label><input type="checkbox" />????</label>
-                <label><input type="checkbox" />????</label>
-                <label><input type="checkbox" />????</label>
-                <label><input type="checkbox" />????</label>
-                <label><input type="checkbox" />????</label>
-            </form>
+            <h3>... and that's only the beginning.</h3>
+            <img src="~/Content/images/iceberg.jpg" />
         </div>
         <div class="step slide" data-x="0" data-y="3000">
-            <h2>So how do we handle all of this?</h2>
+            <h3>So how do we handle all of this?</h3>
+            <br /><br />
+            <ul>
+                <li>Checklists?</li>
+                <li>Style Guides?</li>
+                <li>Trying Harder?</li>
+            </ul>
         </div>
         <div class="step slide" data-x="1000" data-y="3000">
-            <h2>Bake it in the architecture!</h2>
-            <p>Automate your UI Standards</p>
+            <h2>Bake it into your architecture!</h2>
+            <img src="~/Content/images/pie_chart.jpeg" />
         </div>
         <div class="step slide" data-x="0" data-y="4000">
-            <h2>Todays Goal</h2>
-            <p>Use MVC Components to automate coding standards</p>
+            <h2>Today's Goal</h2>
+            <br />
+            <h4>Use ASP.NET MVC to automate coding standards.</h4>
+            <br />
+            <h4>Advantages:</h4>
+            <ul>
+                <li>Separation of Concerns</li>
+                <li>Faster Development</li>
+                <li>Fewer bugs</li>
+            </ul> 
         </div>
         <div class="step slide" data-x="0" data-y="5000">
             <h2>Roadmap</h2>
-            <p>Automate your UI Standards</p>
+            <br /><br />
+            <ul>
+                <li>Custom Validation</li>
+                <li>Templates</li>
+                <li>HTML Helpers</li>
+            </ul>
+            <h4>ASP.NET MVC 6</h4>
+            <ul>
+                <li>Tag Helpers</li>
+                <li>View Components</li>
+            </ul>
+        </div>
+        <div class="step slide" data-x="0" data-y="6000">
+            <h3>Custom Validation - Basic Validation</h3>
+            <br /><br />
+            <ul>
+                <li>Regular Expression</li>
+                <li>Range</li>
+                <li>Required</li>
+                <li>Remote</li>
+            </ul>
+        </div>
+        <div class="step slide" data-x="1000" data-y="6000">
+            <h3>Custom Validation - Custom</h3>
+            <br /><br />
+            @Html.ActionLink("to the Demo!", "Contact", "Home")
         </div>
     </div>
-
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

@@ -198,6 +198,9 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\images\basicform.png" />
+    <Content Include="Content\images\iceberg.jpg" />
+    <Content Include="Content\images\pie_chart.jpeg" />
     <Content Include="Content\slides.css">
       <DependentUpon>slides.less</DependentUpon>
     </Content>

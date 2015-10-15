@@ -6,7 +6,6 @@ Stolen and adapted from:
 
 @font: 'Open Sans', Arial, sans-serif;
 
-
 @font-size-base:          28px;
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
 @font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
@@ -22,6 +21,11 @@ Stolen and adapted from:
 @line-height-base:        1.428571429; // 20/14
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 @line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
+
+@input-height-base:              (@line-height-computed );
+
+@padding-base-vertical:     6px;
+@padding-base-horizontal:   12px;
 
 /*
     We start with a good ol' reset.
@@ -183,7 +187,7 @@ a:focus {
     border-radius: 5px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
 
-    color: rgb(102, 102, 102);
+    color: #262626;
     text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
 
     font-family: @font;
@@ -281,4 +285,34 @@ ol {
   ol {
     margin-bottom: 0;
   }
+}
+
+
+// Forms
+
+label {
+  display: inline-block;
+  max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  display: block;
+  width: 75%;
+  height: @input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+  padding: @padding-base-vertical @padding-base-horizontal;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  //border: 1px solid @input-border;
+  //border-radius: @input-border-radius; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
+}
+
+img{
+    max-height:80%;
+    max-width:80%;
+    display:block;
+    margin: 0 auto;
+    padding-top:10px;
 }
