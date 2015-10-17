@@ -119,5 +119,29 @@ namespace UIDemos.Helpers
 			var writer = htmlHelper.ViewContext.Writer;
 			return new RowContainer(writer, cssClass);
 		}
-	}
+        
+        private class PanelContainer : IDisposable
+        {
+            private readonly TextWriter _writer;
+
+            public PanelContainer(TextWriter writer, string title)
+            {
+                _writer = writer;
+                _writer.WriteLine(@"<div class='panel panel-default'>
+                                        <div class='panel-heading'><strong>{0}</strong></div>
+                                        <div class='panel-body'>", title);
+            }
+
+            public void Dispose()
+            {
+                _writer.Write("</div></div>");
+            }
+        }
+
+        public static IDisposable BeginPanel(this HtmlHelper htmlHelper, string title = "")
+        {
+            var writer = htmlHelper.ViewContext.Writer;
+            return new PanelContainer(writer, title);
+        }
+    }
 }

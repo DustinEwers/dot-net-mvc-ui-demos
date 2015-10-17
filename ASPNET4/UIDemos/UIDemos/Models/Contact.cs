@@ -49,7 +49,7 @@ namespace UIDemos.Models
 
 		[Display(Name = "State")]
 		public string State { get; set; }
-
+        
 		[Display(Name = "Email Address")]
 		public string Email { get; set; }
 

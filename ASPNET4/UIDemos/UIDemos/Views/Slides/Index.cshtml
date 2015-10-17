@@ -34,15 +34,15 @@
                 ASP.NET MVC UI Recipes <br />
                 <small>Build Better Interfaces With Less Code</small>
             </h2>
-            <br/>
-            <br/>
+            <br />
+            <br />
             <br />
             <br />
             <br />
             <br />
             <p><strong>Dustin Ewers</strong></p>
             <p>
-                Twitter: <strong>DustinJEwers</strong> <br/>
+                Twitter: <strong>&#64;DustinJEwers</strong> <br />
                 Website: <strong>www.dustinewers.com</strong> <br />
                 LinkedIn: <strong>www.linkedin.com/in/dustinewers</strong>
             </p>
@@ -52,7 +52,7 @@
             </p>
         </div>
         <div id="what-makes-a-good-form" class="step slide" data-x="0" data-y="1000">
-            <h2>What makes a good form?</h2>
+            <h2>What makes a good UI?</h2>
             <img src="~/Content/images/basicform.png" />
         </div>
         <div class="step slide" data-x="1000" data-y="1000">
@@ -60,11 +60,11 @@
             <br /><br />
             <ul>
                 <li>Affordances</li>
-                <li>Useful Messaging</li>
+                <li>Useful Feedback / Messaging</li>
                 <li>Labels and their placement</li>
                 <li>Required field indication</li>
                 <li>Input Control Choice (Radio, Checkbox, Text, Select, etc...)</li>
-                <li>Feedback</li>
+                <li>Easy navigation</li>
             </ul>
         </div>
         <div class="step slide" data-x="2000" data-y="1000">
@@ -83,16 +83,17 @@
                 <li>Color Choice</li>
                 <li>Spacing and Padding</li>
                 <li>Layout</li>
+                <li>Consistency</li>
             </ul>
         </div>
         <div class="step slide" data-x="4000" data-y="1000">
             <h2>Accessability</h2>
             <br /><br />
             <ul>
-                <li>Contrast levels</li>
-                <li>Alt Tags</li>
+                <li>Contrast levels / Colorblind friendliness</li>
                 <li>Aria / Screen Readers</li>
                 <li>Label matching</li>
+                <li><a href="http://www.ssa.gov/accessibility/bpl/default.htm" target="_blank">508 Compliance</a></li>
             </ul>
         </div>
         <div class="step slide" data-x="2000" data-y="2000" data-scale="1.5">
@@ -104,7 +105,7 @@
             <br /><br />
             <ul>
                 <li>Checklists?</li>
-                <li>Style Guides?</li>
+                <li><a href="http://getbootstrap.com/css/" target="_blank">Style Guides?</a></li>
                 <li>Trying Harder?</li>
             </ul>
         </div>
@@ -115,14 +116,14 @@
         <div class="step slide" data-x="0" data-y="4000">
             <h2>Today's Goal</h2>
             <br />
-            <h4>Use ASP.NET MVC to automate coding standards.</h4>
+            <p>Use ASP.NET MVC to automate UI standards <br />by creating reusable components.</p>
             <br />
             <h4>Advantages:</h4>
             <ul>
                 <li>Separation of Concerns</li>
                 <li>Faster Development</li>
                 <li>Fewer bugs</li>
-            </ul> 
+            </ul>
         </div>
         <div class="step slide" data-x="0" data-y="5000">
             <h2>Roadmap</h2>
@@ -137,16 +138,29 @@
                 <li>Tag Helpers</li>
                 <li>View Components</li>
             </ul>
+
+            @Html.ActionLink("to the Demo!", "Contact", "Home")
         </div>
-        <div class="step slide" data-x="0" data-y="6000">
-            <h3>Custom Validation - Basic Validation</h3>
-            <br /><br />
+        <div id="summary" class="step slide" data-x="0" data-y="6000">
+            <h3>Major Takeaways</h3>
             <ul>
-                <li>Regular Expression</li>
-                <li>Range</li>
-                <li>Required</li>
-                <li>Remote</li>
+                <li>1. UI/UX is complex</li>
+                <li>2. ASP.NET MVC has a tons of tools to automate that complexity</li>
+                <li>3. ASP.NET MVC 6 has even more tools</li>
             </ul>
+            <br />
+            <br />
+            <br />
+            <h4>Contact Info:</h4>
+            <p>
+                Twitter: <strong>&#64;DustinJEwers</strong> <br />
+                Website: <strong>www.dustinewers.com</strong> <br />
+                LinkedIn: <strong>www.linkedin.com/in/dustinewers</strong>
+            </p>
+            <p>
+                Demo Code:
+                <strong>github.com/DustinEwers/dot-net-mvc-ui-demos</strong>
+            </p>
         </div>
         <div class="step slide" data-x="1000" data-y="6000">
             <h3>Custom Validation - Custom</h3>
