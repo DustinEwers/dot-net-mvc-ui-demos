@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
-using vNextUIDemos.Models;
+using vNextUIDemos.ViewModels.Home;
 
 namespace vNextUIDemos.Controllers
 {
@@ -16,7 +16,7 @@ namespace vNextUIDemos.Controllers
 
         public IActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewData["Message"] = "Your application description page.";
 
             return View();
         }

@@ -3,18 +3,19 @@ using Microsoft.AspNet.Razor.Runtime.TagHelpers;
 
 namespace vNextUIDemos.TagHelpers
 {
-	public class FormgroupTagHelper : TagHelper
+    [HtmlTargetElement("formgroup")]
+    public class FormgroupTagHelper : TagHelper
     {
-        private const string SizeAttributeName = "size";
+        [HtmlAttributeName("size")]
+        public string columnSize { get; set; }
 
-	    public override void Process(TagHelperContext context, TagHelperOutput output)
+        public override void Process(TagHelperContext context, TagHelperOutput output)
 	    {
 			int size;
-			Int32.TryParse(context.AllAttributes[SizeAttributeName].ToString(), out size);
+			Int32.TryParse(columnSize, out size);
 
 			output.TagName = "div";
 			output.Attributes["class"] =  string.Format("form-group col-md-{0}", size);
-		    output.Attributes.Remove(SizeAttributeName);
 	    }
     }
 }
