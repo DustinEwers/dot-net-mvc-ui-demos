@@ -25,7 +25,7 @@ namespace vNextUIDemos.ViewComponents
             // ReSharper disable once Mvc.ViewNotResolved
             return View(cart);
         }
-
+        
         // TODO - Actually hook up the shopping cart with real product adds. 
         private void AddProducts(ShoppingCart cart)
         {
