@@ -9,27 +9,6 @@ namespace UIDemos.Models
 {
 	public class Contact
 	{
-		public IEnumerable<SelectListItem> States
-		{
-			get
-			{
-				var states = new List<string> {
-					"Alabama", "Alaska","Arizona","Arkansas","California",
-					"Colorado","Connecticut","Delaware","Florida","Georgia",
-					"Hawaii","Idaho","Illinois","Indiana","Iowa",
-					"Kansas","Kentucky","Louisiana","Maine","Maryland",
-					"Massachusetts","Michigan","Minnesota","Mississippi","Missouri",
-					"Montana","Nebraska","Nevada","New Hampshire","New Jersey",
-					"New Mexico","New York","North Carolina","North Dakota","Ohio",
-					"Oklahoma","Oregon","Pennsylvania", "Rhode Island","South Carolina",
-					"South Dakota","Tennessee","Texas","Utah","Vermont",
-					"Virginia","Washington","West Virginia","Wisconsin","Wyoming"
-				};
-
-				return states.Select(st => new SelectListItem { Text = st, Value = st });
-			}
-		}
-
 		[Required]
 		[Display(Name = "First Name")]
 		public string FirstName { get; set; }
@@ -51,11 +30,33 @@ namespace UIDemos.Models
 		public string State { get; set; }
         
 		[Display(Name = "Email Address")]
+        [RegularExpression(@"^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$", ErrorMessage="Please enter an email address.")]
 		public string Email { get; set; }
 
 		[PastDateOnly]
 		[Required]
 		[Display(Name = "Birthday")]
 		public DateTime? Birthday { get; set; }
-	}
+
+        public IEnumerable<SelectListItem> States
+        {
+            get
+            {
+                var states = new List<string> {
+                    "Alabama", "Alaska","Arizona","Arkansas","California",
+                    "Colorado","Connecticut","Delaware","Florida","Georgia",
+                    "Hawaii","Idaho","Illinois","Indiana","Iowa",
+                    "Kansas","Kentucky","Louisiana","Maine","Maryland",
+                    "Massachusetts","Michigan","Minnesota","Mississippi","Missouri",
+                    "Montana","Nebraska","Nevada","New Hampshire","New Jersey",
+                    "New Mexico","New York","North Carolina","North Dakota","Ohio",
+                    "Oklahoma","Oregon","Pennsylvania", "Rhode Island","South Carolina",
+                    "South Dakota","Tennessee","Texas","Utah","Vermont",
+                    "Virginia","Washington","West Virginia","Wisconsin","Wyoming"
+                };
+
+                return states.Select(st => new SelectListItem { Text = st, Value = st });
+            }
+        }
+    }
 }
