@@ -201,6 +201,8 @@
     <Content Include="Content\images\basicform.png" />
     <Content Include="Content\images\exploits_of_a_mom.png" />
     <Content Include="Content\images\iceberg.jpg" />
+    <Content Include="Content\images\modernart.png" />
+    <Content Include="Content\images\pac.gif" />
     <Content Include="Content\images\pie_chart.jpeg" />
     <Content Include="Content\slides.css">
       <DependentUpon>slides.less</DependentUpon>
@@ -360,7 +362,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Shared\EditorTemplates\Contact.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\DateTime.cshtml" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
     <Content Include="Views\Slides\Index.cshtml" />
